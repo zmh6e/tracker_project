@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1017095807872",
+    "project_id": "community-engagement-tracker",
+    "storage_bucket": "community-engagement-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017095807872:android:c041c6b79779c43d2c5765",
+        "android_client_info": {
+          "package_name": "com.example.communityengagementtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017095807872-id80qps3djbh8hr4be4e915rm63k5l9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMSB0MgHyplWFYUEyda7yzL0Q9J9lILOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017095807872-id80qps3djbh8hr4be4e915rm63k5l9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
