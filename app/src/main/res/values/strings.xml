@@ -9,7 +9,13 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="add_engagements">Add Engagements</string>
-    <string name="view_requests">Requests</string>
+    <string name="email">E-Mail</string>
+    <string name="submit">Submit</string>
     <string name="logout">Logout</string>
+    <string name="reset_pass">Reset Password</string>
+    <string name="add_engagements">Add Engagements</string>
+    <!-- Strings related to the requests page -->
+    <string name="view_requests">Requests</string>
+    <string name ="available_requests">Available Requests</string>
+
 </resources>
