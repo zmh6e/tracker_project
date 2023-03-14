@@ -16,6 +16,10 @@
         "source": "com.example.communityengagementtracker.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "com.example.communityengagementtracker.app-merged_res-35:/layout_requests_view.xml.flat",
+        "source": "com.example.communityengagementtracker.app-main-37:/layout/requests_view.xml"
+    },
+    {
         "merged": "com.example.communityengagementtracker.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "com.example.communityengagementtracker.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
     },

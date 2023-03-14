@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -28,12 +29,16 @@ public final class HomePageBinding implements ViewBinding {
   @NonNull
   public final Button requestsButton;
 
+  @NonNull
+  public final Toolbar toolbar2;
+
   private HomePageBinding(@NonNull ConstraintLayout rootView, @NonNull Button engagementButton,
-      @NonNull Button logoutButton, @NonNull Button requestsButton) {
+      @NonNull Button logoutButton, @NonNull Button requestsButton, @NonNull Toolbar toolbar2) {
     this.rootView = rootView;
     this.engagementButton = engagementButton;
     this.logoutButton = logoutButton;
     this.requestsButton = requestsButton;
+    this.toolbar2 = toolbar2;
   }
 
   @Override
@@ -81,8 +86,14 @@ public final class HomePageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbar2;
+      Toolbar toolbar2 = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar2 == null) {
+        break missingId;
+      }
+
       return new HomePageBinding((ConstraintLayout) rootView, engagementButton, logoutButton,
-          requestsButton);
+          requestsButton, toolbar2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

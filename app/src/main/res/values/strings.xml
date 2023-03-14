@@ -12,4 +12,5 @@
     <string name="add_engagements">Add Engagements</string>
     <string name="view_requests">Requests</string>
     <string name="logout">Logout</string>
+    <string name="available_requests" />
 </resources>

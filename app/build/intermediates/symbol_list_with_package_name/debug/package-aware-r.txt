@@ -2649,6 +2649,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id availableRequests
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3028,6 +3029,8 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
+id toolbar2
 id top
 id topPanel
 id touch_outside
@@ -3222,6 +3225,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout requests_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3280,6 +3284,7 @@ string add_engagements
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string available_requests
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string character_counter_content_description

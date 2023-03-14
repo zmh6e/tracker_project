@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.example.communityengagementtracker.app-mergeDebugResources-34:/layout/requests_view.xml",
+        "source": "com.example.communityengagementtracker.app-main-37:/layout/requests_view.xml"
+    },
+    {
         "merged": "com.example.communityengagementtracker.app-mergeDebugResources-34:/layout/activity_tracker.xml",
         "source": "com.example.communityengagementtracker.app-main-37:/layout/activity_tracker.xml"
     },
