@@ -1,12 +1,25 @@
 package com.example.communityengagementtracker;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.communityengagementtracker.data.LoginDataSource;
+import com.example.communityengagementtracker.ui.login.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Tracker extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
+    private LoginDataSource dataSource;
     TextView date;
     TextView StartTime;
     TextView EndTime;
@@ -15,6 +28,10 @@ public class Tracker extends AppCompatActivity {
     TextView StudentName;
     TextView PartnerName;
     TextView Comments;
+
+    Button submitButton;
+
+    Button logoutButton;
 
 EditText inputText;
     @Override
@@ -30,5 +47,19 @@ EditText inputText;
         StudentName=(TextView) findViewById(R.id.StudentName);
         PartnerName=(TextView) findViewById(R.id.PartnerName);
         Comments=(TextView) findViewById(R.id.Comments);
+
+        logoutButton = findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+                logout();
+            }
+        });
+    }
+    private void logout() {
+        Intent logoutIntent = new Intent(this, LoginActivity.class);
+        startActivity(logoutIntent);
+        mAuth.signOut();
+        Toast.makeText(this, "Logout Successful", Toast.LENGTH_SHORT).show();
     }
 }

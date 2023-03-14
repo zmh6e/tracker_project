@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import com.example.communityengagementtracker.Home;
 import com.example.communityengagementtracker.R;
+import com.example.communityengagementtracker.Requests;
+import com.example.communityengagementtracker.ResetPassword;
 import com.example.communityengagementtracker.Tracker;
 import com.example.communityengagementtracker.ui.login.LoginViewModel;
 import com.example.communityengagementtracker.ui.login.LoginViewModelFactory;
@@ -70,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = binding.password;
         final Button loginButton = binding.login;
         final ProgressBar loadingProgressBar = binding.loading;
-
+        final Button resetButton = binding.resetPassword;
 
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
@@ -148,6 +150,16 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReset();
+            }
+        });
+    }
+    private void openReset (){
+        Intent resetIntent = new Intent(this, ResetPassword.class);
+        startActivity(resetIntent);
     }
     private void signIn (String username, String password){
         mAuth.signInWithEmailAndPassword(username, password)
@@ -191,7 +203,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            startActivity(new Intent(LoginActivity.this,Tracker.class));
+                            startActivity(new Intent(LoginActivity.this,Home.class));
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -212,7 +224,6 @@ public class LoginActivity extends AppCompatActivity {
         if (user==null)
             return;
         String welcome = getString(R.string.welcome) + user.getEmail();
-        // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 

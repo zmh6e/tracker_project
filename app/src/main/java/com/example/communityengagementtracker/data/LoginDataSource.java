@@ -1,6 +1,15 @@
 package com.example.communityengagementtracker.data;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
+import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
+
+import com.example.communityengagementtracker.ui.login.LoginActivity;
 import com.example.communityengagementtracker.data.model.LoggedInUser;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 
@@ -9,6 +18,7 @@ import java.io.IOException;
  */
 public class LoginDataSource {
 
+    private FirebaseAuth mAuth;
 
     public Result<LoggedInUser> login(String username, String password) {
 
@@ -22,9 +32,5 @@ public class LoginDataSource {
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));
         }
-    }
-
-    public void logout() {
-        // TODO: revoke authentication
     }
 }
